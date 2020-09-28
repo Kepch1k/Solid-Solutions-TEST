@@ -1,0 +1,126 @@
+.NodeContainer {
+    padding: 0;
+    margin: 0;
+}
+
+.NodeContainer li {
+    list-style-type: none;
+}
+
+
+
+/* indent for all tree children excepts root */
+.Node {
+    background-image : url(../img/i.gif);
+    background-position : top left;
+    background-repeat : repeat-y;
+    margin-left: 18px;
+    zoom: 1;
+}
+
+.IsRoot {
+    margin-left: 0;
+}
+
+
+/* left vertical line (grid) for all nodes */
+.IsLast {
+    background-image: url(../img/i_half.gif);
+    background-repeat : no-repeat;
+}
+ 
+.ExpandOpen .Expand {
+    background-image: url(../img/expand_minus.gif);
+}
+ 
+/* closed is higher priority than open */
+.ExpandClosed .Expand {
+    background-image: url(../img/expand_plus.gif);
+}
+ 
+/* highest priority */
+.ExpandLeaf .Expand {
+    background-image: url(../img/expand_leaf.gif);
+}
+
+.Content {
+    min-height: 18px;
+    /* margin-left:18px; */
+}
+
+* html  .Content {
+    height: 18px; 
+}
+
+.Expand {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+
+.ExpandLoading   {
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image: url(../img/expand_loading.gif);
+}
+
+
+
+.ExpandOpen .NodeContainer {
+	display: block;
+}
+
+.ExpandClosed .NodeContainer {
+	display: none;
+}
+
+.ExpandOpen .Expand, .ExpandClosed .Expand {
+	cursor: pointer;
+}
+.ExpandLeaf .Expand {
+	cursor: auto;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+footer 
+{
+	background: #16222A;
+	background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+	background: linear-gradient(59deg, #3A6073, #16222A);
+	color: white;
+	margin-top:100px;
+}
+
+.fa-plus{
+    color: green;
+    margin: 0 5px;
+}
+
+.fa-minus{
+	color: red;
+}
+
+.fa{
+    cursor: pointer;
+}
+
+#timer{
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+#createRootButton{
+    margin: 10px;
+}
