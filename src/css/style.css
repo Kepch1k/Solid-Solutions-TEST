@@ -1,19 +1,22 @@
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
 .NodeContainer {
     padding: 0;
     margin: 0;
+    overflow-y: hidden;
 }
 
 .NodeContainer li {
     list-style-type: none;
 }
 
-
-
-/* indent for all tree children excepts root */
 .Node {
-    background-image : url(../img/i.gif);
-    background-position : top left;
-    background-repeat : repeat-y;
+    background-image: url(../img/i.gif);
+    background-position: top left;
+    background-repeat: repeat-y;
     margin-left: 18px;
     zoom: 1;
 }
@@ -22,34 +25,29 @@
     margin-left: 0;
 }
 
-
-/* left vertical line (grid) for all nodes */
 .IsLast {
     background-image: url(../img/i_half.gif);
-    background-repeat : no-repeat;
+    background-repeat: no-repeat;
 }
- 
+
 .ExpandOpen .Expand {
-    background-image: url(../img/expand_minus.gif);
+    background-image: url(../img/expand_minus.png);
 }
- 
-/* closed is higher priority than open */
+
 .ExpandClosed .Expand {
-    background-image: url(../img/expand_plus.gif);
+    background-image: url(../img/expand_plus.png);
 }
- 
-/* highest priority */
+
 .ExpandLeaf .Expand {
     background-image: url(../img/expand_leaf.gif);
 }
 
 .Content {
     min-height: 18px;
-    /* margin-left:18px; */
 }
 
-* html  .Content {
-    height: 18px; 
+* html .Content {
+    height: 18px;
 }
 
 .Expand {
@@ -58,69 +56,70 @@
     float: left;
 }
 
-
-.ExpandLoading   {
+.ExpandLoading {
     width: 18px;
     height: 18px;
     float: left;
     background-image: url(../img/expand_loading.gif);
 }
 
-
-
 .ExpandOpen .NodeContainer {
-	display: block;
+    height: auto;
 }
 
 .ExpandClosed .NodeContainer {
-	display: none;
+    height: 0px;
 }
 
-.ExpandOpen .Expand, .ExpandClosed .Expand {
-	cursor: pointer;
+.ExpandOpen .Expand,
+.ExpandClosed .Expand {
+    cursor: pointer;
 }
+
 .ExpandLeaf .Expand {
-	cursor: auto;
+    cursor: auto;
 }
 
-body
-{
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-footer 
-{
-	background: #16222A;
-	background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
-	background: linear-gradient(59deg, #3A6073, #16222A);
-	color: white;
-	margin-top:100px;
+footer {
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
+    color: white;
+    margin-top: 100px;
 }
 
-.fa-plus{
+.fa-plus {
     color: green;
     margin: 0 5px;
 }
 
-.fa-minus{
-	color: red;
+.fa-minus {
+    color: red;
 }
 
-.fa{
+.fa {
     cursor: pointer;
 }
 
-#timer{
+#timer {
     margin-right: auto;
     font-size: 20px;
     font-weight: bold;
     color: red;
 }
 
-#createRootButton{
+#createRootButton {
     margin: 10px;
+}
+
+#Tree-root {
+    overflow: auto;
 }
