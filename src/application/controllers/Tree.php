@@ -49,6 +49,31 @@ class Tree extends Controller
        
     }
 
+    public function actionUpdate()
+    {
+        $response = array();
+        $name = $_POST['name'];
+        $id = $_POST['id'];
+        $data = (object) [];
+       
+        $result = $this->model->updateNode($name, $id);
+
+        if(is_numeric($result)){
+            $response["status"] = "success";
+            $response["data"] = array();
+            $response["data"]["id"] = $result;
+            $response["code"] = 200;
+            http_response_code(200);
+        }else{
+            http_response_code(500);
+            $response["status"] = "Error";
+        }
+
+        header('Content-Type: text/json; charset=utf-8');
+        echo json_encode($response);
+       
+    }
+
     public function actionDelete()
     {
         $id = $_POST['id'];
