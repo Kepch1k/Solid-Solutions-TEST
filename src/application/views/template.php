@@ -30,7 +30,7 @@
 
 		<?php include 'application/views/' . $content_view;?>
 		
-		<footer class="pt-5 text-muted text-center text-small mt-auto">
+		<footer class="pt-3 text-muted text-center text-small mt-auto">
 			<p class="mb-1">© Solid Solutions Test 2020—2020. All rights reserved.</p>
 		</footer>
 
@@ -56,6 +56,33 @@
 				<div class="modal-footer">
 					<button id="CloseCreateModalButton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					<button id="CreateNodeSubmit" class="btn btn-primary">Submit</button>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Update node modal -->
+		<div class="modal fade" id="UpdateNodeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Update node</h5>
+					<button id="ExitUpdateModalButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="UpdateNode" method="post" action="">
+						<div class="form-group">
+							<label for="node-name" class="col-form-label">Name for node:</label>
+							<input type="text" class="form-control" id="node-name" name="node-name">
+							<div id="node-name-feedback" class="invalid-feedback">Example invalid custom select feedback</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button id="CloseUpdateModalButton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button id="UpdateNodeSubmit" class="btn btn-primary">Submit</button>
 				</div>
 				</div>
 			</div>
