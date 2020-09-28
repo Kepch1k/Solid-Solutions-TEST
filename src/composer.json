@@ -1,0 +1,25 @@
+{
+    "name": "kepch1k/solid-test",
+    "description": "solid solutions test",
+    "license": "top-secret",
+    "authors": [
+        {
+            "name": "Kaminai",
+            "email": "kephik2000@gmail.com"
+        }
+    ],
+
+    "require": {
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Application\\Core\\": "application/core",
+            "Application\\Controllers\\": "application/controllers",
+            "Application\\Models\\": "application/models"
+        },
+        "files": [
+            "application/constants.php"
+        ]
+    }
+}
