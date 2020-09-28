@@ -39,6 +39,16 @@ class Tree extends Model
         }
         return $node_id;
     }
+
+    public function updateNode($name, $id)
+    {
+        $q = 'UPDATE `tree_nodes` SET `name`="'.$name.'" WHERE ( (id = '.$id.') AND (parent_node_id IS NOT NULL) )';
+        $this->dbQuery($q);
+        // if(mysql_affected_rows()==0){
+        //     return "Error";
+        // }
+        return $id;
+    }
     
     /**
      * deleteNode
