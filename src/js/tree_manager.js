@@ -149,7 +149,7 @@ class TreeNode {
         createRootButton.innerText = "Create Root";
         createRootButton.addEventListener("click", () => {
             jQuery.ajax({
-                url: "http://testsolid/tree/insert",
+                url: "http://"+window.location.hostname+"/tree/insert",
                 type: "POST",
                 data: { name: "Root", parentId: "empty" },
                 dataType: "json",

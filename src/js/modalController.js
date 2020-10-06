@@ -32,7 +32,7 @@ observer.observe(deleteNodeModal, config);
 deleteNodeButton.addEventListener("click", () => {
     const { nodeToDelete } = window;
     jQuery.ajax({
-        url: "http://testsolid/tree/delete",
+        url: "http://"+window.location.hostname+"/tree/delete",
         type: "POST",
         data: { id: nodeToDelete },
         dataType: "json",
@@ -83,7 +83,7 @@ createNodeSubmit.addEventListener("click", () => {
         const { nodeToAddChildren } = window;
 
         jQuery.ajax({
-            url: "http://testsolid/tree/insert",
+            url: "http://"+window.location.hostname+"/tree/insert",
             type: "POST",
             data: { name: value, parentId: nodeToAddChildren },
             dataType: "json",
@@ -133,7 +133,7 @@ updateNodeSubmit.addEventListener("click", () => {
         const { nodeToUpdate } = window;
 
         jQuery.ajax({
-            url: "http://testsolid/tree/update",
+            url: "http://"+window.location.hostname+"/tree/update",
             type: "POST",
             data: { name: value, id: nodeToUpdate },
             dataType: "json",

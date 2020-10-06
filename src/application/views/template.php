@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" href="/img/favicon.png" type="image/png">
 		<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
 		<script src="/js/jquery-3.5.1.min.js" type="text/javascript" defer></script>
-		<script src="/js/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="/js/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
 		<script src="/js/bootstrap/bootstrap.min.js"></script>
 		<script src="/js/timer.js" type="text/javascript" defer></script>
 		<script src="/js/tree_manager.js" type="text/javascript"></script>
